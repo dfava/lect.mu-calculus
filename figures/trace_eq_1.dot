@@ -1,0 +1,12 @@
+digraph {
+  rankdir=LR;
+  graph [splines=true; esep=1]
+  node [shape=box]
+	P1 -> P2 [label=C]
+  P2 -> P3 [label="request-tea"]
+	I [style=invis]
+  P2 -> I  [style=invis]
+  P2 -> P4 [label="request-coffee"]
+  P3 -> P1 [label="tea"]
+  P4 -> P1 [label="coffee"]
+}

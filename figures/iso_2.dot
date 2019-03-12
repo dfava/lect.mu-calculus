@@ -1,0 +1,8 @@
+digraph {
+  rankdir=LR;
+  node [shape=box]
+	Q1 -> Q2 [label=a]
+  Q2 -> Q3 [label=b]
+  Q2 -> Q3 [style=invis]
+  Q3 -> Q2 [label=a]
+}

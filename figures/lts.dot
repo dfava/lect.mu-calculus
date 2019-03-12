@@ -1,0 +1,31 @@
+digraph {
+  rankdir=LR;
+  graph [nodesep=0.5, ranksep=1]
+  node [shape=circle,width=.7,fixedsize=true]
+  //n2d, n3d, n4d [label="...", shape=none]
+  n2ii, n3ii, n4ii [label="", shape=none, width=0]
+  n2io, n3io, n4io [label="", shape=none, width=0]
+  n1 [label="{p, q}", xlabel="n1"]
+  n2 [label="{q}", xlabel="n2"]
+  n3 [label="{p}", xlabel="n3"]
+  n4 [label="{p, q}", xlabel="n4"]
+  n5 [label="{q}", xlabel="n5"]
+  //n1 -> n2 [label="a"]
+  //n1 -> n3 [label="b"]
+  //n1 -> n4 [label="a"]
+  n1 -> n2ii [arrowsize=0]//,len=0.1]
+  n1 -> n3ii [arrowsize=0]//,len=0.1]
+  n1 -> n4ii [arrowsize=0]//,len=0.1]
+  n2ii -> n2 [label="a"]
+  n3ii -> n3 [label="b"]
+  n4ii -> n4 [label="a"]
+  n2 -> n2io [arrowsize=0]
+  n3 -> n3io [arrowsize=0]
+  n4 -> n4io [arrowsize=0]
+  n2io -> n5 [label="a"]
+  n3io -> n5 [label="a"]
+  n4io -> n5 [label="b"]
+  //n2 -> n2d
+  //n3 -> n3d
+  //n4 -> n4d
+}

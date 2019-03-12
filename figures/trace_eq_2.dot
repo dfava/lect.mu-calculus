@@ -1,0 +1,16 @@
+digraph {
+  rankdir=LR;
+  node [shape=box]
+  {rank=min Q1}
+  {rank=same Q2, Q4}
+  {rank=max Q3, Q5, I}
+  graph [splines=true; esep=1]
+  I [style=invis]
+	Q1 -> Q2 [label=C]
+  Q2 -> Q3 [label="request-tea"]
+  Q3 -> Q1 [label="tea"]
+  Q3 -> I  [style=invis] 
+  Q1 -> Q4 [label=C]
+  Q4 -> Q5 [label="request-coffee"]
+  Q5 -> Q1 [label="coffee"]
+}
